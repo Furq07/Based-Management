@@ -8,6 +8,7 @@ const chalk = require("chalk");
 const { Guilds } = GatewayIntentBits;
 const { User, Message, GuildMember, ThreadMember } = Partials;
 const { loadEvents } = require("./Handlers/eventHandler");
+const keepAlive = require("./server");
 const client = new Client({
   intents: [Guilds],
   partials: [User, Message, GuildMember, ThreadMember],
@@ -30,7 +31,8 @@ loadEvents(client)
   );
 
 // ———————————————[Login Into Bot]———————————————
-client.login(env.process.TOKEN);
+const keepAlive = require("./server");
+client.login(process.env.TOKEN);
 
 // ———————————————[Error Handling]———————————————
 process.on("unhandledRejection", (reason, p) => {
