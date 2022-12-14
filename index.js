@@ -7,13 +7,12 @@ const {
 const chalk = require("chalk");
 const { Guilds } = GatewayIntentBits;
 const { User, Message, GuildMember, ThreadMember } = Partials;
-const { loadEvents } = require("../src/Handlers/eventHandler");
+const { loadEvents } = require("./Handlers/eventHandler");
 const client = new Client({
   intents: [Guilds],
   partials: [User, Message, GuildMember, ThreadMember],
 });
 
-client.config = require("./src/config.json");
 client.events = new Collection();
 client.commands = new Collection();
 client.subCommands = new Collection();

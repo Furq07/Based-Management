@@ -1,5 +1,5 @@
 // [-------------------[Imports]-------------------]
-const { loadCommands } = require("../../src/Handlers/commandHandler");
+const { loadCommands } = require("../../Handlers/commandHandler");
 const chalk = require("chalk");
 const { ActivityType } = require("discord.js");
 // [-------------------[File Initiation]-------------------]
