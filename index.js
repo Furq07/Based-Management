@@ -31,7 +31,7 @@ loadEvents(client)
   );
 
 // ———————————————[Login Into Bot]———————————————
-client.login(client.config.token);
+client.login(env.process.TOKEN);
 
 // ———————————————[Error Handling]———————————————
 process.on("unhandledRejection", (reason, p) => {
