@@ -31,7 +31,7 @@ loadEvents(client)
   );
 
 // ———————————————[Login Into Bot]———————————————
-const keepAlive = require("./server");
+keepAlive();
 client.login(process.env.TOKEN);
 
 // ———————————————[Error Handling]———————————————
